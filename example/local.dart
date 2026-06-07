@@ -1,0 +1,3 @@
+import 'model.dart';
+
+List<User> allUsers = [User(firstName: 'Oluwaseyi', lastName: 'Fatunmole', age: 20, isNewCustomer: true, dob: DateTime.now()), User(firstName: 'Oluwaseyi', lastName: 'Fatunmole', age: 20, isNewCustomer: true, dob: DateTime.now()), User(firstName: 'Oluwaseyi', lastName: 'Fatunmole', age: 20, isNewCustomer: true, dob: DateTime.now()), User(firstName: 'Oluwaseyi', lastName: 'Fatunmole', age: 20, isNewCustomer: true, dob: DateTime.now()), User(firstName: 'Oluwaseyi', lastName: 'Fatunmole', age: 20, isNewCustomer: true, dob: DateTime.now()), User(firstName: 'Oluwaseyi', lastName: 'Fatunmole', age: 20, isNewCustomer: true, dob: DateTime.now())];

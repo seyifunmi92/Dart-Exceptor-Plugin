@@ -1,5 +1,5 @@
-import 'package:result_x/result_x.dart';
 import 'package:test/test.dart';
+import 'package:result_x/result_x.dart';
 
 void main() {
   group('A group of tests', () {

@@ -1,7 +1,7 @@
 abstract class Trace<T, E> {
   const Trace();
 
-  split();
+  V split<V>({required V Function(T value) data, required V Function(E e) e});
 
   map();
 
