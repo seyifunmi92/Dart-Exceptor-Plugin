@@ -1,6 +1,6 @@
 name: dart_exceptor
 description: A lightweight, idiomatic Dart result type. Built on Dart 3 with zero dependencies. Features Trace<T,E>, Ok, Err, split, map, mapError and bind.
-version: 1.1.1
+version: 1.1.2
 repository: https://github.com/seyifunmi92/Dart-Exceptor-Plugin
 
 environment:

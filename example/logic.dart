@@ -3,7 +3,7 @@ import 'model.dart';
 import 'usecase.dart';
 import 'api_mock.dart';
 import 'repository.dart';
-import 'package:dart_exceptor/src/trace/impl/ok.dart';
+import 'package:dart_exceptor/dart_exceptor.dart';
 
 class UserLogic {
   final logic = Usecase(

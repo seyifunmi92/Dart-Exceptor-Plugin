@@ -14,3 +14,6 @@
 
 ## 1.1.1
 * Added Repositiory link
+
+## 1.1.2
+* Added useage example in main.dart 
