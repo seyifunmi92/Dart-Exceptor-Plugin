@@ -1,7 +1,7 @@
 name: result_x
-description: A starting point for Dart libraries or applications.
+description: A lightweight, idiomatic Dart result type. Built on Dart 3 with zero dependencies. Features Trace<T,E>, Ok, Err, split, map, mapError and bind.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/seyifunmi92/ResultX-Plugin
 
 environment:
   sdk: ^3.11.1
