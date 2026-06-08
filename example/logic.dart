@@ -50,22 +50,18 @@ class UserLogic {
     try {
       final result = await logic.getAllUsers();
 
-      final user = result.bind<User>(
-        n: (users) {
-          try {
-            return Ok(users.firstWhere((e) => e.id == id));
-          } catch (e) {
-            return Err(IException(code: 404, e: e.toString()));
-          }
-        },
-      );
-
-      user.bind<String>(
-        n: (u) {
-          print('Here is the user name : ${u.firstName}');
-          return Ok(u.firstName);
-        },
-      );
+      result
+          .bind<User>(
+            n: (users) {
+              return Ok(users.firstWhere((e) => e.id == id));
+            },
+          )
+          .bind<String>(
+            n: (user) {
+              print('Here is the user info ${user.lastName}');
+              return Ok(user.lastName);
+            },
+          );
     } catch (e) {
       rethrow;
     }
