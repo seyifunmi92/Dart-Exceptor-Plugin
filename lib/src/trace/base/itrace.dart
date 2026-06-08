@@ -3,7 +3,9 @@ abstract class Trace<T, E> {
 
   V split<V>({required V Function(T value) data, required V Function(E e) e});
 
-  map();
+  T map({required T Function(T value) data});
 
-  bind();
+  E mapError({required E Function(E error) e});
+
+ Trace<T,E>  bind({required Trace<T,E> Function(T value) n});
 }
