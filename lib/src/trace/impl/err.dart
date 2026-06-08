@@ -20,7 +20,7 @@ class Err<T, E> extends Trace<T, E> {
   }
 
   @override
-  Trace<T, E> bind({required Trace<T, E> Function(T value) n}) {
+  Trace<B, E> bind<B>({required Trace<B, E> Function(T value) n}) {
     return Err(_error);
   }
 }

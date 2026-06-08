@@ -7,5 +7,5 @@ abstract class Trace<T, E> {
 
   E mapError({required E Function(E error) e});
 
- Trace<T,E>  bind({required Trace<T,E> Function(T value) n});
+  Trace<B, E> bind<B>({required Future<Trace<B, E>> Function(T value) n});
 }

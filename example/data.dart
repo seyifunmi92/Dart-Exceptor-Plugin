@@ -8,6 +8,8 @@ import 'package:result_x/src/trace/impl/err.dart';
 
 abstract class DataSource {
   Future<ITrace<List<User>>> getAllUsers();
+  //lets add more functions to explain the 'bind' concept
+  Future<ITrace<User>> getUserById({required int id});
 }
 
 class BaseDataSource extends DataSource {
@@ -20,7 +22,20 @@ class BaseDataSource extends DataSource {
       final res = await mock.callApi(code: 200, data: allUsers);
       return Ok(res.data!);
     } catch (e, st) {
-      return Err(IException(code: 200, e: e.toString(), stackTrace: st.toString()));
+      return Err(
+        IException(code: 200, e: e.toString(), stackTrace: st.toString()),
+      );
+    }
+  }
+
+  @override
+  Future<ITrace<User>> getUserById({required int id}) async {
+    try {
+      final res = await mock.callApi(code: 200, data: allUsers);
+      final user = res.data?.firstWhere((e) => e.id == id);
+      return Ok(user!);
+    } catch (e) {
+      return Err(IException(code: 500, e: e.toString()));
     }
   }
 }

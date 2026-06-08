@@ -4,6 +4,8 @@ import 'model.dart';
 
 abstract class IRepository {
   Future<ITrace<List<User>>> getAllUsers();
+
+  Future<ITrace<User>> getUserById({required int id});
 }
 
 class Repository extends IRepository {
@@ -13,5 +15,12 @@ class Repository extends IRepository {
   @override
   Future<ITrace<List<User>>> getAllUsers() {
     return dataSource.getAllUsers();
+  }
+
+  @override
+  Future<ITrace<User>> getUserById({required int id}) {
+    return dataSource.getUserById(
+      id: id,
+    );
   }
 }

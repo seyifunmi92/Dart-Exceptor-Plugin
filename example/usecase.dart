@@ -9,4 +9,8 @@ class Usecase {
   Future<ITrace<List<User>>> getAllUsers() {
     return repository.getAllUsers();
   }
+
+  Future<ITrace<User>> getUserById({required int id}) {
+    return repository.getUserById(id: id);
+  }
 }
