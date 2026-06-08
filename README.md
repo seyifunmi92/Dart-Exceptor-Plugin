@@ -57,7 +57,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  result_x: ^0.0.1
+  dart_exceptor: ^0.0.1
 ```
 
 Then run:
@@ -69,7 +69,7 @@ dart pub get
 Import in your Dart file:
 
 ```dart
-import 'package:result_x/result_x.dart';
+import 'package:dart_exceptor/dart_exceptor.dart';
 ```
 
 ---
