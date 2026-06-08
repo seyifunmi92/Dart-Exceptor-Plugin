@@ -1,7 +1,7 @@
 name: dart_exceptor
 description: A lightweight, idiomatic Dart result type. Built on Dart 3 with zero dependencies. Features Trace<T,E>, Ok, Err, split, map, mapError and bind.
 version: 1.0.0
-repository: https://github.com/seyifunmi92/ResultX-Plugin
+repository: https://github.com/seyifunmi92/dart_exceptor
 
 environment:
   sdk: ^3.11.1

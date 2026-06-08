@@ -5,7 +5,7 @@ No dependencies. No Haskell baggage. Just clean error handling that reads like r
 
 ---
 
-## Why ResultX?
+## Why DartExceptor?
 
 The traditional approach to error handling in Dart looks like this:
 
@@ -22,7 +22,7 @@ This works — until it doesn't. As your app grows, try/catch blocks scatter acr
 codebase, errors get swallowed silently, and there's no way to tell from a function
 signature whether it can fail.
 
-**ResultX** solves this by making failure a first-class citizen in your API:
+**DartExceptor** solves this by making failure a first-class citizen in your API:
 
 ```dart
 final result = await repo.getUser();
@@ -41,7 +41,7 @@ outcomes. No surprises, no silent failures.
 ## Motivation
 
 [dartz](https://pub.dev/packages/dartz) is powerful, but it carries significant
-Haskell-inspired complexity that most Flutter developers don't need. ResultX is built
+Haskell-inspired complexity that most Flutter developers don't need. DartExceptor is built
 specifically for Dart and Flutter developers who want:
 
 - A result type that reads like Dart, not Haskell
@@ -78,7 +78,7 @@ import 'package:result_x/result_x.dart';
 
 ### `Trace<T, E>`
 
-`Trace<T, E>` is the base type. Every operation in ResultX returns a `Trace`.
+`Trace<T, E>` is the base type. Every operation in DartExceptor returns a `Trace`.
 
 - `T` — the success type
 - `E` — the error type
@@ -174,7 +174,7 @@ a `DatabaseException` while your domain layer expects an `AppException`.
 
 ### `bind` — Chain operations that return `Trace`
 
-`bind` is the most powerful method in ResultX. It lets you chain operations that
+`bind` is the most powerful method in DartExceptor. It lets you chain operations that
 themselves return a `Trace`, transforming the success type along the way.
 
 `bind` accepts a generic type `B` — the output type of the next operation:
@@ -257,7 +257,7 @@ are skipped — only the `e` handler in `split` runs.
 
 ## Real-World Example
 
-A complete clean architecture implementation using ResultX:
+A complete clean architecture implementation using DartExceptor:
 
 ### Define your error type
 
@@ -403,7 +403,7 @@ void getUserById({required int id}) async {
 
 ## Monad Laws
 
-ResultX satisfies the three monad laws:
+DartExceptor satisfies the three monad laws:
 
 **Left identity** — wrapping a value in `Ok` and binding is the same as applying
 the function directly:
@@ -427,14 +427,14 @@ trace.bind<B>(n: f).bind<C>(n: g) == trace.bind<C>(n: (v) => f(v).bind<C>(n: g))
 
 **One file import.** Everything you need comes from a single import.
 
-**No runtime dependencies.** ResultX has zero external dependencies. It will never
+**No runtime dependencies.** DartExceptor has zero external dependencies. It will never
 break because a transitive dependency changed.
 
 **Dart 3 native.** Built specifically for Dart 3. No legacy workarounds,
 no compatibility shims.
 
 **Architecture agnostic.** Works with clean architecture, MVVM, BLoC, or any
-pattern your team uses. ResultX does not impose structure — it just makes error
+pattern your team uses. DartExceptor does not impose structure — it just makes error
 handling honest.
 
 **Errors are values.** An `Err` is not an exception. It is a value that describes
@@ -473,4 +473,4 @@ My portfolio : https://foluwaseyidev.netlify.app/
 hashnode : https://hashnode.com/@foluwaseyi
 
 
-If ResultX saves you from a production bug, consider giving it a ⭐ on GitHub.
+If DartExceptor saves you from a production bug, consider giving it a ⭐ on GitHub.
