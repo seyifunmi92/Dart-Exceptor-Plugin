@@ -6,7 +6,7 @@ class Ok<T, E> extends Trace<T, E> {
 
   @override
   V split<V>({required V Function(T value) data, required V Function(E e) e}) {
-    return data(_data);s
+    return data(_data);
   }
 
   @override
