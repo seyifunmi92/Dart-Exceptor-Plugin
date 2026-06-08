@@ -1,4 +1,4 @@
-import 'package:result_x/src/trace/base/itrace.dart';
+import 'package:dart_exceptor/src/trace/base/itrace.dart';
 
 class Ok<T, E> extends Trace<T, E> {
   Ok(this._data);
@@ -6,7 +6,7 @@ class Ok<T, E> extends Trace<T, E> {
 
   @override
   V split<V>({required V Function(T value) data, required V Function(E e) e}) {
-    return data(_data);
+    return data(_data);s
   }
 
   @override

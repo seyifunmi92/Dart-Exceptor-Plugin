@@ -1,4 +1,4 @@
-import 'package:result_x/src/trace/base/itrace.dart';
+import 'package:dart_exceptor/src/trace/base/itrace.dart';
 
 class Err<T, E> extends Trace<T, E> {
   Err(this._error);

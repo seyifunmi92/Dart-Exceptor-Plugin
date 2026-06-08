@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:result_x/result_x.dart';
+import 'package:dart_exceptor/dart_exceptor.dart';
 
 void main() {
   group('A group of tests', () {

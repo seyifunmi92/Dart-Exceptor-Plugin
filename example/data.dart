@@ -3,8 +3,8 @@ import 'local.dart';
 import 'model.dart';
 import 'api_mock.dart';
 import 'exception.dart';
-import 'package:result_x/src/trace/impl/ok.dart';
-import 'package:result_x/src/trace/impl/err.dart';
+import 'package:dart_exceptor/src/trace/impl/ok.dart';
+import 'package:dart_exceptor/src/trace/impl/err.dart';
 
 abstract class DataSource {
   Future<ITrace<List<User>>> getAllUsers();

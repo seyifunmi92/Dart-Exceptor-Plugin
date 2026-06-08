@@ -1,12 +1,9 @@
-import 'dart:math';
 import 'data.dart';
 import 'model.dart';
 import 'usecase.dart';
 import 'api_mock.dart';
-import 'exception.dart';
 import 'repository.dart';
-import 'package:result_x/src/trace/impl/ok.dart';
-import 'package:result_x/src/trace/impl/err.dart';
+import 'package:dart_exceptor/src/trace/impl/ok.dart';
 
 class UserLogic {
   final logic = Usecase(

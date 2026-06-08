@@ -1,4 +1,4 @@
-# ResultX
+# DartExceptor
 
 A lightweight, expressive, and idiomatic Dart result type built on modern Dart 3.
 No dependencies. No Haskell baggage. Just clean error handling that reads like real code.
