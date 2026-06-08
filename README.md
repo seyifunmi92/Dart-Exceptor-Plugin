@@ -57,7 +57,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  dart_exceptor: ^0.0.1
+  dart_exceptor: ^1.0.0
 ```
 
 Then run:

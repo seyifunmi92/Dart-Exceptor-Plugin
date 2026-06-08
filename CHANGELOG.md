@@ -11,3 +11,6 @@
 
 ## 1.1.0
 * Optimization
+
+## 1.1.1
+* Added Repositiory link
