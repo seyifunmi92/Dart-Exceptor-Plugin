@@ -8,3 +8,6 @@
 * `map` — extract and transform success value
 * `mapError` — extract and transform error value
 * `bind<B>` — chain operations with type transformation
+
+## 1.1.0
+* Optimization
